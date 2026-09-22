@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="诉讼离婚程序全面指南，包含起诉条件、立案流程、财产分割、子女抚养权判定及庭审注意事项，助您高效解决婚姻法律纠纷。">
+    <meta name="keywords" content="诉讼离婚程序,离婚诉讼,起诉离婚流程,财产分割,抚养权">
+    <title>诉讼离婚程序-法律纠纷解决与实务操作指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #e1e4e8;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: var(--white);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Step Grid */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .step-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--accent-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(52, 152, 219, 0.15);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .step-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Content Layout */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .main-content article {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .main-content h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .main-content ul, .main-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .main-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #eaf2f8;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .checklist-item::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid var(--border-color);
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: var(--bg-light);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <span>⚖️</span> 律法通
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">婚姻家庭</a></li>
+                <li><a href="#">财产债务</a></li>
+                <li><a href="#">常见问题</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta-button">免费咨询</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>诉讼离婚程序全流程解析</h1>
+    <p>从起诉立案到法院判决，为您提供专业、清晰的诉讼离婚步骤指南。了解法律依据，掌握庭审技巧，维护自身合法权益。</p>
+    <div class="hero-tags">
+        <span class="tag">起诉条件</span>
+        <span class="tag">证据准备</span>
+        <span class="tag">财产分割</span>
+        <span class="tag">子女抚养</span>
+    </div>
+</section>
+
+<main class="container">
+    
+    <div class="section-title">
+        <h2>诉讼离婚核心流程</h2>
+        <p>诉讼离婚通常分为五个主要阶段，每个阶段都有严格的法律时限和程序要求。</p>
+    </div>
+
+    <div class="steps-grid">
+        <article class="step-card">
+            <div class="step-number">01</div>
+            <h3>准备起诉材料</h3>
+            <p>整理结婚证、身份证、户口本等基础证件。根据诉求准备相关证据，如家暴证明、分居证明、财产权属证明等，确保材料真实有效。</p>
+        </article>
+        <article class="step-card">
+            <div class="step-number">02</div>
+            <h3>向法院立案</h3>
+            <p>携带材料前往被告户籍地或经常居住地基层人民法院立案庭提交起诉状。法院审查通过后，会出具立案通知书并缴纳诉讼费用。</p>
+        </article>
+        <article class="step-card">
+            <div class="step-number">03</div>
+            <h3>庭前调解</h3>
+            <p>在正式开庭前，法院通常会组织调解。调解并非必经程序，但若双方达成一致，可制作调解书，具有法律效力。</p>
+        </article>
+        <article class="step-card">
+            <div class="step-number">04</div>
+            <h3>正式开庭审理</h3>
+            <p>法院排期开庭。庭审包括法庭调查、法庭辩论、最后陈述等环节。双方需就离婚理由、财产分割、子女抚养等问题进行举证质证。</p>
+        </article>
+        <article class="step-card">
+            <div class="step-number">05</div>
+            <h3>法院判决</h3>
+            <p>庭审结束后，法院会在法定期限内宣判。若感情确已破裂，法院应当准予离婚；若未破裂，通常判决不准离婚。</p>
+        </article>
+    </div>
+
+    <div class="content-layout">
+        <div class="main-content">
+            <article>
+                <h2>起诉离婚的条件与证据准备</h2>
+                <p>根据《中华人民共和国民法典》第一千零七十九条规定，夫妻一方要求离婚的，可以由有关组织进行调解或者直接向人民法院提起离婚诉讼。</p>
+                
+                <h3>必须满足的条件</h3>
+                <ul>
+                    <li><strong>感情确已破裂：</strong>这是法院判决离婚的唯一法定标准。具体表现为：重婚；与他人同居；实施家庭暴力；虐待、遗弃家庭成员；有赌博、吸毒等恶习屡教不改；因感情不和分居满二年。</li>
+                    <li><strong>原告适格：</strong>原告必须是婚姻关系的当事人，且具有完全民事行为能力。</li>
+                </ul>
+
+                <h3>关键证据清单</h3>
+                <p>在诉讼过程中，证据是胜诉的关键。请根据案件具体情况收集以下证据：</p>
+                <div class="highlight-box">
+                    <ul>
+                        <li><strong>证明感情破裂的证据：</strong>家暴报警记录、伤情鉴定报告、分居协议、聊天记录（如悔过书、承认错误信息）。</li>
+                        <li><strong>证明财产的证据：</strong>房产证、银行流水、股权证明、大额转账记录、车辆登记证书。</li>
+                        <li><strong>证明子女抚养权的证据：</strong>子女出生证明、一方长期照顾子女的生活记录、子女意愿陈述（如有）。</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <h2>财产分割与债务处理</h2>
+                <p>离婚诉讼中，财产分割和债务承担往往是争议的焦点。根据法律规定，夫妻共同财产原则上应当均等分割。</p>
+                
+                <h3>夫妻共同财产范围</h3>
+                <ol>
+                    <li>工资、奖金、劳务报酬</li>
+                    <li>生产、经营、投资的收益</li>
+                    <li>知识产权的收益</li>
+                    <li>继承或者受赠的财产（遗嘱或者赠与合同中确定只归一方的财产除外）</li>
+                    <li>其他应当归共同所有的财产</li>
+                </ol>
+
+                <h3>共同债务的认定</h3>
+                <p>夫妻双方共同签名或者夫妻一方事后追认等共同意思表示所负的债务，以及夫妻一方在婚姻关系存续期间以个人名义为家庭日常生活需要所负的债务，属于夫妻共同债务。超出家庭日常生活需要的债务，由夫妻共同承担，但债权人能够证明该债务用于夫妻共同生活、共同生产经营或者基于夫妻双方共同意思表示的除外。</p>
+            </article>
+        </div>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>立案前自查清单</h3>
+                <div class="checklist-item">结婚证原件及复印件</div>
+                <div class="checklist-item">双方身份证复印件</div>
+                <div class="checklist-item">被告户籍证明或居住证</div>
+                <div class="checklist-item">起诉状（一式两份）</div>
+                <div class="checklist-item">相关证据材料清单</div>
+                <div class="checklist-item">财产线索清单</div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>常见问题 FAQ</h3>
+                <div class="faq-item">
+                    <h4>起诉离婚需要多久？</h4>
+                    <p>简易程序通常为3个月内审结，普通程序为6个月内审结。若适用简易程序转为普通程序，审限会相应延长。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>第一次起诉离婚会判离吗？</h4>
+                    <p>如果法院认定夫妻感情尚未完全破裂，第一次起诉通常判决不准离婚。若判决生效后六个月内再次起诉，且感情确已破裂，一般会判离。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>一方不同意离婚怎么办？</h4>
+                    <p>只要法院经审理认定感情确已破裂，即使一方不同意，法院也会依法判决离婚。</p>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>诉讼费用参考</h3>
+                <p>离婚案件每件交纳案件受理费50元至300元。涉及财产分割，财产总额不超过20万元的，不另行交纳；超过20万元的部分，按照0.5%交纳。</p>
+                <div class="highlight-box" style="margin-top: 1rem; font-size: 0.85rem;">
+                    <strong>注意：</strong>具体费用请以当地法院最新规定为准。
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <p>律法通致力于为大众提供准确、实用的法律知识普及服务，帮助用户在遇到法律问题时能够从容应对，维护自身合法权益。</p>
+        </div>
+        <div class="footer-col">
+            <h4>法律援助</h4>
+            <ul>
+                <li><a href="#">婚姻家庭法</a></li>
+                <li><a href="#">劳动争议</a></li>
+                <li><a href="#">合同纠纷</a></li>
+                <li><a href="#">刑事辩护</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>服务条款</h4>
+            <ul>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">使用指南</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 律法通法律服务平台 版权所有 | 本网站内容仅供参考，不构成正式法律意见。</p>
+    </div>
+</footer>
+
+</body>
+</html>
