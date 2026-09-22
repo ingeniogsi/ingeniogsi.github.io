@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久久外汇-专业外汇交易指南与市场分析平台</title>
+    <meta name="description" content="久久外汇提供实时外汇行情、深度市场分析、专业交易策略及新手入门教程。我们致力于帮助投资者全面了解外汇市场，掌握交易技巧，实现财富增值。">
+    <meta name="keywords" content="久久外汇, 外汇交易, 外汇平台, 外汇分析, 交易策略, 外汇入门">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #0066cc;
+            --accent-hover: #0052a3;
+            --success-color: #10b981;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            background-color: #eff6ff;
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 1.8rem;
+            color: var(--success-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Market Overview */
+        .market-section {
+            padding: 3rem 0;
+            background-color: var(--card-bg);
+            margin-top: -2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .market-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .market-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .pair-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pair-price {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .pair-change {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .text-up { color: var(--success-color); }
+        .text-down { color: #ef4444; }
+
+        /* Main Content Grid */
+        .main-content {
+            padding: 3rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Articles List */
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background-color: #cbd5e1;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 1.5rem;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        .strategy-list li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .strategy-list li:last-child {
+            border-bottom: none;
+        }
+
+        .strategy-list h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .strategy-list span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #94a3b8;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                padding: 1rem 0;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                久久<span>外汇</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">外汇入门</a></li>
+                    <li><a href="#">市场分析</a></li>
+                    <li><a href="#">交易策略</a></li>
+                    <li><a href="#">新手学院</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">注册账户</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>把握全球机遇<br>开启专业外汇交易之旅</h1>
+            <p>久久外汇为您提供实时行情、权威市场解读与实战交易技巧，助您在波动的市场中稳健前行。</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="#" class="btn btn-primary">开始学习</a>
+                <a href="#" class="btn btn-outline" style="border-color: white; color: white;">浏览策略</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>全球市场实时监控</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>深度市场分析报告</p>
+                </div>
+                <div class="stat-item">
+                    <h3>0</h3>
+                    <p>交易门槛（模拟账户）</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="market-section">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>实时外汇行情</h2>
+                    <p>捕捉市场波动，掌握交易先机</p>
+                </div>
+                <a href="#" class="btn btn-outline" style="font-size: 0.85rem;">查看完整行情表 &rarr;</a>
+            </div>
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="pair-name">EUR/USD 欧元/美元</div>
+                    <div class="pair-price">1.0854</div>
+                    <div class="pair-change text-up">+0.15%</div>
+                </div>
+                <div class="market-card">
+                    <div class="pair-name">GBP/USD 英镑/美元</div>
+                    <div class="pair-price">1.2632</div>
+                    <div class="pair-change text-down">-0.08%</div>
+                </div>
+                <div class="market-card">
+                    <div class="pair-name">USD/JPY 美元/日元</div>
+                    <div class="pair-price">149.85</div>
+                    <div class="pair-change text-up">+0.22%</div>
+                </div>
+                <div class="market-card">
+                    <div class="pair-name">AUD/USD 澳元/美元</div>
+                    <div class="pair-price">0.6541</div>
+                    <div class="pair-change text-down">-0.05%</div>
+                </div>
+                <div class="market-card">
+                    <div class="pair-name">XAU/USD 黄金</div>
+                    <div class="pair-price">2,341.50</div>
+                    <div class="pair-change text-up">+0.45%</div>
+                </div>
+                <div class="market-card">
+                    <div class="pair-name">XAG/USD 白银</div>
+                    <div class="pair-price">27.85</div>
+                    <div class="pair-change text-up">+0.12%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content container">
+        <div class="content-grid">
+            <!-- Articles Column -->
+            <div class="articles-column">
+                <div class="section-title" style="margin-bottom: 1.5rem;">
+                    <h2>最新外汇资讯</h2>
+                    <p>深度解析宏观经济与市场动态</p>
+                </div>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/forex1/800/400" alt="美联储政策分析" class="article-image">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span class="badge">宏观经济</span>
+                            <span>2023-10-24</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">美联储降息预期升温，非美货币迎来反弹契机？</a></h3>
+                        <p class="article-excerpt">近期市场对美联储降息的预期不断升温，美元指数承压下行。本文将深入分析影响美联储决策的关键因素，以及这对欧元、英镑等非美货币的潜在影响。</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">阅读全文</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/forex2/800/400" alt="技术分析图表" class="article-image">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span class="badge">技术分析</span>
+                            <span>2023-10-23</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">黄金突破关键阻力位，多头如何布局？</a></h3>
+                        <p class="article-excerpt">黄金价格近期强势突破2300美元整数关口，技术面MACD指标出现金叉信号。结合美元指数走势，本文为您梳理黄金的多头交易策略。</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">阅读全文</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/forex3/800/400" alt="风险管理" class="article-image">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span class="badge">风险管理</span>
+                            <span>2023-10-22</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">外汇交易中的资金管理：保住本金是盈利的前提</a></h3>
+                        <p class="article-excerpt">许多新手交易者亏损并非因为缺乏策略，而是因为糟糕的资金管理。本文将介绍仓位控制、止损设置等核心风控技巧，助您在市场中长久生存。</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">阅读全文</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar Column -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">热门交易策略</h4>
+                    <ul class="strategy-list">
+                        <li>
+                            <h4><a href="#">支撑阻力位实战应用</a></h4>
+                            <span>5分钟阅读 · 进阶</span>
+                        </li>
+                        <li>
+                            <h4><a href="#">如何利用斐波那契回调</a></h4>
+                            <span>8分钟阅读 · 中级</span>
+                        </li>
+                        <li>
+                            <h4><a href="#">双顶双底形态识别</a></h4>
+                            <span>6分钟阅读 · 入门</span>
+                        </li>
+                        <li>
+                            <h4><a href="#">均线系统交叉信号</a></h4>
+                            <span>10分钟阅读 · 入门</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">新手必读</h4>
+                    <ul class="strategy-list">
+                        <li>
+                            <h4><a href="#">外汇市场是如何运作的？</a></h4>
+                            <span>了解市场机制</span>
+                        </li>
+                        <li>
+                            <h4><a href="#">外汇点差与手续费详解</a></h4>
+                            <span>降低交易成本</span>
+                        </li>
+                        <li>
+                            <h4><a href="#">选择正规外汇经纪商指南</a></h4>
+                            <span>保障资金安全</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget" style="background: #eff6ff; border-color: #bfdbfe;">
+                    <h4 class="widget-title" style="border-color: var(--accent-color);">免费领取资料</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">立即注册，获取《2024外汇交易策略手册》</p>
+                    <input type="email" placeholder="请输入您的邮箱" style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: 1px solid #cbd5e1; border-radius: 4px;">
+                    <button class="btn btn-primary" style="width: 100%;">领取资料</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <section class="faq-section">
+        <div class="container faq-container">
+            <div class="section-title" style="text-align: center; margin-bottom: 2rem;">
+                <h2>常见问题解答</h2>
+                <p>解答关于外汇交易、账户开设及市场操作的疑问</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">外汇交易的风险有哪些？</div>
+                <div class="faq-answer">外汇交易具有杠杆效应，虽然能放大收益，但也会放大亏损。汇率波动受多种因素影响，可能导致本金损失。此外，还需注意交易对手风险和流动性风险。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">新手如何开始外汇交易？</div>
+                <div class="faq-answer">建议新手先在模拟账户中练习，熟悉交易软件和基本操作。同时学习基础的技术分析和基本面知识，并制定严格的交易计划和资金管理规则。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">什么是点差，它对交易有什么影响？</div>
+                <div class="faq-answer">点差是买入价和卖出价之间的差额，是经纪商的主要收入来源。较低的点差可以降低交易成本。新手应关注主要货币对的点差水平。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何判断外汇市场的趋势？</div>
+                <div class="faq-answer">可以通过移动平均线、趋势线以及K线形态来判断趋势。上升趋势通常表现为价格持续在均线上方运行，且高点和低点依次抬高。</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>久久外汇</h2>
+                    <p>我们致力于为全球投资者提供最专业、最及时的外汇市场资讯与交易工具。让外汇交易变得简单、透明、高效。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>市场服务</h3>
+                    <ul>
+                        <li><a href="#">外汇交易</a></li>
+                        <li><a href="#">黄金白银</a></li>
+                        <li><a href="#">CFD差价合约</a></li>
+                        <li><a href="#">股票指数</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>学习中心</h3>
+                    <ul>
+                        <li><a href="#">外汇入门</a></li>
+                        <li><a href="#">技术分析</a></li>
+                        <li><a href="#">市场评论</a></li>
+                        <li><a href="#">交易工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 久久外汇. All Rights Reserved. 投资有风险，入市需谨慎。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
