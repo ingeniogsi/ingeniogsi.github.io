@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="妖精的尾巴动漫 - 全网最全的妖精的尾巴动画资讯、角色图鉴、剧情解析及高清资源下载指南。了解纳兹、露西、格雷等主要角色，探索魔导士公会的故事。">
+    <meta name="keywords" content="妖精的尾巴动漫,妖精的尾巴,动漫资讯,魔导士公会,纳兹,露西,格雷">
+    <title>妖精的尾巴动漫 - 魔导士公会故事与角色图鉴</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5a623;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --text-light: #666;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing: 20px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a90e2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://picsum.photos/seed/fairytail_bg/1600/600') no-repeat center center/cover;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #d48806;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        .section-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            background: rgba(74, 144, 226, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            align-self: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        /* Featured Section */
+        .featured-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .featured-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .featured-img {
+            height: 250px;
+            width: 100%;
+        }
+
+        .featured-content {
+            padding: 25px;
+        }
+
+        .featured-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .featured-text {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Characters Section */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .char-card {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .char-card:hover {
+            transform: scale(1.03);
+        }
+
+        .char-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .char-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .char-role {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Info/FAQ Section */
+        .info-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 50px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-block h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .info-block ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-block ul li::before {
+            content: '•';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .featured-layout {
+                grid-template-columns: 1fr;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>✦</span> 妖精的尾巴动漫
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">动画资讯</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">漫画解析</a></li>
+                    <li><a href="#">剧场版</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>魔导士公会的故事</h1>
+            <p>跟随纳兹、露西和他们的伙伴，在艾德拉斯大陆与哈迪斯展开决战，寻找传说中的魔法王座。</p>
+            <a href="#latest" class="btn">观看最新资讯</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Featured Article -->
+        <section class="featured-layout" id="latest">
+            <div class="featured-card">
+                <div class="featured-img">
+                    <img src="https://picsum.photos/seed/fairytail_final/800/400" alt="妖精的尾巴最终章">
+                </div>
+                <div class="featured-content">
+                    <span class="card-tag">深度解析</span>
+                    <h2 class="featured-title">妖精的尾巴最终章：从公会解散到再集结的史诗旅程</h2>
+                    <p class="featured-text">《妖精的尾巴》在完结篇中不仅带来了震撼的战斗场面，更深刻探讨了“羁绊”与“成长”的主题。本文将回顾从X791年公会解散到最终决战的关键节点，分析主要角色的命运走向。</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: bold;">阅读全文 &rarr;</a>
+                </div>
+            </div>
+            <aside>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">热门剧场版</h3>
+                        <ul style="margin-top: 10px;">
+                            <li style="margin-bottom: 15px;">
+                                <img src="https://picsum.photos/seed/movie1/60/60" style="float:left; margin-right:10px; border-radius:4px; width:60px; height:60px;">
+                                <div>
+                                    <div style="font-weight:bold; font-size:0.9rem;">妖精的尾巴：赤色炎魔</div>
+                                    <div style="font-size:0.8rem; color:#666;">2011年上映</div>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <img src="https://picsum.photos/seed/movie2/60/60" style="float:left; margin-right:10px; border-radius:4px; width:60px; height:60px;">
+                                <div>
+                                    <div style="font-weight:bold; font-size:0.9rem;">龙之啼哭</div>
+                                    <div style="font-size:0.8rem; color:#666;">2012年上映</div>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <img src="https://picsum.photos/seed/movie3/60/60" style="float:left; margin-right:10px; border-radius:4px; width:60px; height:60px;">
+                                <div>
+                                    <div style="font-weight:bold; font-size:0.9rem;">破灭的魔导书</div>
+                                    <div style="font-size:0.8rem; color:#666;">2012年上映</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Latest Updates -->
+        <section>
+            <div class="section-title">
+                <span>最新动态</span>
+                <a href="#">查看更多 &rarr;</a>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/fairytail_ep/400/250" alt="妖精的尾巴动画第1-328集">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">动画资讯</span>
+                        <h3 class="card-title">妖精的尾巴动画全328集高清资源整理</h3>
+                        <p class="card-desc">整理了妖精的尾巴TV动画从2009年开播至2019年完结的所有集数，包含日版原声与中文配音版本，方便新老观众重温经典。</p>
+                        <div class="card-meta">
+                            <span>2023-10-24</span>
+                            <span>👁 12,405</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/fairytail_manga/400/250" alt="妖精的尾巴漫画完结">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">漫画连载</span>
+                        <h3 class="card-title">高桥留美子漫画《妖精的尾巴》完结纪念</h3>
+                        <p class="card-desc">连载超过16年的国民级漫画正式落下帷幕，回顾高桥留美子笔下的魔法世界，那些感动与热血的瞬间。</p>
+                        <div class="card-meta">
+                            <span>2023-10-22</span>
+                            <span>👁 8,932</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/fairytail_game/400/250" alt="妖精的尾巴手游">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">游戏联动</span>
+                        <h3 class="card-title">《勇者斗恶龙》联动活动回顾</h3>
+                        <p class="card-desc">妖精的尾巴与勇者斗恶龙系列推出梦幻联动，玩家可在游戏中体验杰尔夫与勇者斗恶龙主角的跨次元对决。</p>
+                        <div class="card-meta">
+                            <span>2023-10-20</span>
+                            <span>👁 5,671</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section style="margin-top: 60px;">
+            <div class="section-title">
+                <span>主要角色图鉴</span>
+                <a href="#">查看全角色 &rarr;</a>
+            </div>
+            <div class="char-grid">
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/natsu/200/200" alt="纳兹" class="char-avatar">
+                    <div class="char-name">纳兹·多拉格尼尔</div>
+                    <div class="char-role">灭龙魔导士 / 赤色炎魔</div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/lucy/200/200" alt="露西" class="char-avatar">
+                    <div class="char-name">露西·哈特菲利亚</div>
+                    <div class="char-role">星灵魔导士 / 魔导士公会会长</div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/grant/200/200" alt="格雷" class="char-avatar">
+                    <div class="char-name">格雷·佛尔帕斯塔</div>
+                    <div class="char-role">冰之造型魔导士</div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/erza/200/200" alt="艾露莎" class="char-avatar">
+                    <div class="char-name">艾露莎·舒卡勒托</div>
+                    <div class="char-role">妖精女王 / 红色魔导士</div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/sherry/200/200" alt="夏露露" class="char-avatar">
+                    <div class="char-name">夏露露</div>
+                    <div class="char-role">露娜·希利亚斯 / 恋人</div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/gajeel/200/200" alt="伽吉特" class="char-avatar">
+                    <div class="char-name">伽吉特</div>
+                    <div class="char-role">钢之灭龙魔导士</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info & FAQ -->
+        <section class="info-section" style="margin-top: 60px;">
+            <div class="section-title">
+                <span>观看指南与常见问题</span>
+            </div>
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>观看顺序推荐</h3>
+                    <ul>
+                        <li><strong>TV动画版：</strong> 建议按集数顺序观看，从第1集至第328集，这是完整的主线故事。</li>
+                        <li><strong>剧场版：</strong> 《妖精的尾巴：赤色炎魔》、《龙之啼哭》、《破灭的魔导书》、《凤凰之血》、《圣剑之威光》等。</li>
+                        <li><strong>OVA：</strong> 包含在部分蓝光碟中，主要补充TV版未涉及的番外剧情。</li>
+                    </ul>
+                    <h3 style="margin-top: 20px;">关于剧情</h3>
+                    <p>故事主要围绕位于魔法王国的魔法公会“妖精的尾巴”展开。主角纳兹·多拉格尼尔在寻找伊格尼尔的过程中加入了公会，并结识了露西、格雷等伙伴。他们共同经历了无数次冒险、战斗与成长，最终在“大魔斗演武”与“冥府之门”的危机中证明了自己。</p>
+                </div>
+                <div class="info-block">
+                    <h3>常见问题 (FAQ)</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">妖精的尾巴一共有多少集？</div>
+                        <div class="faq-answer">TV动画版共328集，漫画版全545话。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">哪里可以看正版妖精的尾巴？</div>
+                        <div class="faq-answer">您可以在各大正版流媒体平台搜索观看，支持正版是动漫发展的动力。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">伊格尼尔去哪里了？</div>
+                        <div class="faq-answer">伊格尼尔是灭龙魔导士，在对抗灭龙魔导士阿库诺罗利亚的战斗中为了保护纳兹而牺牲。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">露西的星灵还能出来吗？</div>
+                        <div class="faq-answer">在漫画最终章中，露西作为妖精的尾巴会长，与星灵们保持着良好的关系。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于妖精的尾巴</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        妖精的尾巴是一个非商业性质的粉丝资讯站，旨在整理和分享关于高桥留美子创作的国民级漫画及其改编动画的相关信息。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">动画列表</a></li>
+                        <li><a href="#">漫画章节</a></li>
+                        <li><a href="#">角色介绍</a></li>
+                        <li><a href="#">剧场版</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">高桥留美子官方</a></li>
+                        <li><a href="#">动画制作公司</a></li>
+                        <li><a href="#">周边商品推荐</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 妖精的尾巴动漫资讯站. All Rights Reserved. 本站内容仅供学习交流，版权归原作者所有.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
